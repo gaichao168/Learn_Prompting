@@ -8,9 +8,9 @@ const math = require('remark-math');
 async function createConfig() {
   const katex = (await import('rehype-katex')).default;
   return {
-    title: 'Learn Prompting',
-    tagline: 'A Free, Open Source Course on Communicating with Artificial Intelligence',
-    url: 'https://learnprompting.org',
+    title: '学习提示',
+    tagline: '关于与人工智能通信的免费开源课程',
+    url: 'https://prompt.wobcw.com',
     baseUrl: '/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -26,7 +26,7 @@ async function createConfig() {
     // metadata like html lang. For example, if your site is Chinese, you may want
     // to replace "en" with "zh-Hans".
     i18n: {
-      defaultLocale: 'en',
+      defaultLocale: 'zh-Hans',
       locales: ['en', 'es', 'fr', 'ja', 'pt', 'zh-Hans', 'ko', 'si', 'ru'],
     },
   
@@ -65,6 +65,11 @@ async function createConfig() {
       {
         src: "https://embed.trydyno.com/embedder.js",
         defer: true
+      },
+      {
+        async:true,
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4193846562907716",
+        crossorigin:"anonymous"
       }
     ],
     stylesheets: [
@@ -84,7 +89,7 @@ async function createConfig() {
     themeConfig:
       ({
         navbar: {
-          title: 'Learn Prompting',
+          title: '学习提示',
           logo: {
             alt: 'My Site Logo',
             src: 'img/simple_ai.png',
@@ -92,32 +97,36 @@ async function createConfig() {
           items: [
             {to: 'docs/intro', label:"Learn", position:"left"},
             {to: 'contribute', label:"Contribute", position:"left"},
-            {to: 'supporters', label:"Supporters", position:"left"},
             {
-              to: 'certificate', 
-              label:"Certificate", 
-              position:"left",          
+              href: 'https://chat.wobcw.com',
+              label: '在线聊天',
             },
-            {
-              to: 'consulting', 
-              label:"Consulting", 
-              position:"left",          
-              className: 'consulting-gradient',
-            },
-            {
-              type: 'localeDropdown',
-              position: 'right',
-            },
-            {
-              href: 'https://github.com/trigaten/Learn_Prompting/releases',
-              label: 'Change Log',
-              position: 'right',
-            },
-            {
-              href: 'https://github.com/trigaten/promptgineering',
-              label: 'GitHub',
-              position: 'right',
-            }
+            // {to: 'supporters', label:"Supporters", position:"left"},
+            // {
+            //   to: 'certificate',
+            //   label:"Certificate",
+            //   position:"left",
+            // },
+            // {
+            //   to: 'consulting',
+            //   label:"Consulting",
+            //   position:"left",
+            //   className: 'consulting-gradient',
+            // },
+            // {
+            //   type: 'localeDropdown',
+            //   position: 'right',
+            // },
+            // {
+            //   href: 'https://github.com/trigaten/Learn_Prompting/releases',
+            //   label: 'Change Log',
+            //   position: 'right',
+            // },
+            // {
+            //   href: 'https://github.com/trigaten/promptgineering',
+            //   label: 'GitHub',
+            //   position: 'right',
+            // }
           ],
         },
         footer: {
